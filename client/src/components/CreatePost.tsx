@@ -1,4 +1,4 @@
-import React from "react";
+
 import Avatar from "react-avatar";
 import { CiImageOn } from "react-icons/ci";
 
@@ -16,7 +16,7 @@ const CreatePost = () => {
           <h1 className="font-semibold text-gray-700 text-lg ">Following</h1>
         </div>
       </div>
-      {/* for you and following */}
+      {/* for you and following ends*/}
 
       {/* avatar and input */}
       <div className="flex items-center p-4">
