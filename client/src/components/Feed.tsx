@@ -7,6 +7,7 @@ const Feed = () => {
     <div className='w-[60%] border'>
       <CreatePost/>
       <Tweets/>
+      <Tweets/>
     </div>
   )
 }
