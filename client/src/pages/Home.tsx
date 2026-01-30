@@ -1,13 +1,13 @@
 import Feed from '@/components/Feed'
 import LeftSidebar from '@/components/LeftSidebar'
 import RightSidebar from '@/components/RightSidebar'
-import React from 'react'
+import {Outlet} from "react-router-dom"
 
 const Home = () => {
   return (
-    <div className='flex justify-between w-[80%] mx-auto'>
+    <div className='flex justify-between w-[85%] mx-auto  gap-1'>
       <LeftSidebar/>
-      <Feed/>
+     <Outlet/>
       <RightSidebar/>
     </div>
   )

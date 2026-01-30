@@ -22,7 +22,7 @@ const CreatePost = () => {
       <div className="flex items-center p-4">
         <Avatar size="40" src="/vite.svg" round={true} />
         <input
-          className="w-full outline-none border-none text-lg ml-2"
+          className="w-full outline-none border-none text-xl ml-2"
           type="text"
           placeholder="what is happening?"
         />
@@ -33,7 +33,7 @@ const CreatePost = () => {
       {/*image input,post  */}
       <div className="flex items-center justify-between p-4  border-b">
         <div>
-          <CiImageOn />
+          <CiImageOn size={24} />
         </div>
         <button className="px-3 py-1 border-none bg-[#1D9BF0] rounded-full text-white text-lg cursor-pointer">
           Post
