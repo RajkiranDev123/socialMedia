@@ -5,11 +5,11 @@ export const createTweet = async (req, res) => {
   try {
     const { description } = req.body;
     const id = req.user;
-    console.log(id)
+    console.log(id);
 
     if (!description || !id) {
       return res.status(400).json({
-        message: "Fields are required.",
+        message: "All Fields are required.",
         success: false,
       });
     }
@@ -21,6 +21,23 @@ export const createTweet = async (req, res) => {
     });
     return res.status(201).json({
       message: "Tweet created successfully.",
+      success: true,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      message: "Internal Server Error",
+    });
+  }
+};
+
+//////////////////////////////////////////
+
+export const deleteTweet = async (req, res) => {
+  try {
+    const { id } = req.params;
+    await Tweet.findByIdAndDelete(id);
+    return res.status(200).json({
+      message: "Tweet deleted successfully.",
       success: true,
     });
   } catch (error) {
