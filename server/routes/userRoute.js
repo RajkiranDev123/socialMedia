@@ -3,11 +3,11 @@ import {
   Login,
   Register,
   bookmark,
-  // follow,
+  follow,
   getMyProfile,
   getOtherUsers,
   logout,
-  // unfollow,
+  unfollow,
 } from "../controllers/userController.js";
 import isAuthenticated from "../config/auth.js";
 
@@ -21,7 +21,7 @@ router.route("/bookmark/:id").put(isAuthenticated, bookmark)
 // router.route("/otheruser/:id").get(isAuthenticated, getOtherUsers);
 router.route("/profile").get(isAuthenticated, getMyProfile);
 router.route("/otheruser").get(isAuthenticated, getOtherUsers);
-// router.route("/follow/:id").post(isAuthenticated, follow);
-// router.route("/unfollow/:id").post(isAuthenticated, unfollow);
+router.route("/follow/:id").post(isAuthenticated, follow);
+router.route("/unfollow/:id").post(isAuthenticated, unfollow);
 
 export default router;
