@@ -130,3 +130,7 @@ export default App
 npm i react-icons
 npm i react-avatar
 npm i react-router-dom
+
+
+npm i axios
+npm i react-hot-toast
